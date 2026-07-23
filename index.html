@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Satish Chandra Yadav | Full-Stack Web Developer</title>
+<meta name="description" content="Satish Chandra Yadav — Full-Stack Web Developer specializing in modern, performant web experiences with React, Node.js and clean UI engineering.">
+<meta name="keywords" content="Satish Chandra Yadav, Full Stack Developer, Web Developer Portfolio, React Developer, BCA Developer">
+<meta name="author" content="Satish Chandra Yadav">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Satish Chandra Yadav | Full-Stack Web Developer">
+<meta property="og:description" content="Portfolio of Satish Chandra Yadav — building fast, elegant, full-stack web experiences.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22 fill=%22%236C63FF%22>S</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============ LOADER ============ -->
+<div class="loader" id="loader">
+  <div class="loader-inner">
+    <span class="loader-mark">S<span class="loader-dot">.</span></span>
+    <div class="loader-bar"><span></span></div>
+  </div>
+</div>
+
+<!-- ============ CUSTOM CURSOR ============ -->
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-glow" id="cursorGlow"></div>
+
+<!-- ============ SCROLL PROGRESS ============ -->
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- ============ BACKGROUND LAYERS ============ -->
+<div class="bg-layer">
+  <div class="grid-pattern"></div>
+  <div class="noise-layer"></div>
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  <div class="blob blob-3"></div>
+  <div class="particles" id="particles"></div>
+</div>
+
+<!-- ============ HEADER ============ -->
+<header class="header" id="header">
+  <nav class="nav container">
+    <a href="#home" class="logo"><span class="accent-text">SATISH</span></a>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home" class="nav-link active" data-section="home">Home</a></li>
+      <li><a href="#about" class="nav-link" data-section="about">About</a></li>
+      <li><a href="#skills" class="nav-link" data-section="skills">Skills</a></li>
+      <li><a href="#projects" class="nav-link" data-section="projects">Projects</a></li>
+      <li><a href="#services" class="nav-link" data-section="services">Services</a></li>
+      <li><a href="#achievements" class="nav-link" data-section="achievements">Journey</a></li>
+      <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+    </ul>
+
+    <a href="#contact" class="btn btn-small btn-primary nav-cta">Let's Talk</a>
+
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+</header>
+
+<!-- ============ MOBILE MENU ============ -->
+<div class="mobile-menu" id="mobileMenu">
+  <ul>
+    <li><a href="#home" class="mobile-link">Home</a></li>
+    <li><a href="#about" class="mobile-link">About</a></li>
+    <li><a href="#skills" class="mobile-link">Skills</a></li>
+    <li><a href="#projects" class="mobile-link">Projects</a></li>
+    <li><a href="#services" class="mobile-link">Services</a></li>
+    <li><a href="#achievements" class="mobile-link">Journey</a></li>
+    <li><a href="#contact" class="mobile-link">Contact</a></li>
+  </ul>
+</div>
+
+<main>
+
+<!-- ============ HERO SECTION ============ -->
+<section class="hero" id="home">
+  <div class="container hero-grid">
+
+    <div class="hero-content">
+      <p class="eyebrow reveal-up">
+        <span class="status-dot"></span> Available for internships &amp; freelance work
+      </p>
+
+      <h1 class="hero-title reveal-up" style="--delay:1">
+        Hi, I'm <span class="gradient-text">Satish Chandra<br>Yadav</span>
+      </h1>
+
+      <h2 class="hero-subtitle reveal-up" style="--delay:2">
+        <span id="typingText"></span><span class="type-cursor">|</span>
+      </h2>
+
+      <p class="hero-desc reveal-up" style="--delay:3">
+        A second-year BCA student who builds full-stack products end to end —
+        from pixel-accurate interfaces to the APIs and databases running underneath them.
+        I care about code that reads well and interfaces that feel effortless.
+      </p>
+
+      <div class="hero-cta reveal-up" style="--delay:4">
+        <a href="#projects" class="btn btn-primary magnetic">
+          <span>View My Work</span>
+        </a>
+        <a href="Satish_Resume.pdf" class="btn btn-outline magnetic" id="resumeBtn" download> <!-- RESUME LINE -->
+          <span>Download Resume</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 3v12m0 0l-4-4m4 4l4-4M4 21h16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+
+      <div class="hero-social reveal-up" style="--delay:5">
+        <a href="https://github.com/satishyadav01" class="social-icon" aria-label="GitHub"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.66.5 12.03c0 5.1 3.29 9.42 7.86 10.95.57.1.78-.25.78-.55v-2.1c-3.2.7-3.88-1.4-3.88-1.4-.52-1.34-1.28-1.7-1.28-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.2 1.77 1.2 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.56-.29-5.25-1.28-5.25-5.72 0-1.26.45-2.29 1.2-3.1-.12-.29-.52-1.47.11-3.06 0 0 .97-.31 3.2 1.18a11.1 11.1 0 0 1 5.82 0c2.22-1.5 3.19-1.18 3.19-1.18.63 1.59.23 2.77.11 3.06.75.81 1.2 1.84 1.2 3.1 0 4.45-2.7 5.42-5.27 5.71.42.36.78 1.08.78 2.17v3.22c0 .3.21.66.79.55A10.53 10.53 0 0 0 23.5 12.02C23.5 5.66 18.35.5 12 .5z"/></svg></a>
+        <a href="https://www.linkedin.com/in/satish-chandra-yadav-05aa5a302/" class="social-icon" aria-label="LinkedIn"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.86 6 2.48 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.24 8.25h4.5V23H.24V8.25zM8.5 8.25h4.31v2.02h.06c.6-1.14 2.07-2.34 4.26-2.34 4.55 0 5.39 3 5.39 6.9V23h-4.5v-6.85c0-1.63-.03-3.73-2.27-3.73-2.28 0-2.63 1.78-2.63 3.62V23H8.5V8.25z"/></svg></a>
+        <a href="https://x.com/satish_yadav_00" class="social-icon" aria-label="Twitter / X"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 2H22l-7.2 8.24L23.3 22h-6.6l-5.2-6.8L5.5 22H2.3l7.7-8.8L1 2h6.75l4.7 6.2L18.9 2zm-1.16 18h1.83L7.35 3.9H5.4L17.74 20z"/></svg></a>
+        <a href="mailto:satishchandyadav584@gmail.com" class="social-icon" aria-label="Email"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M3 5h18v14H3V5zm0 0l9 7 9-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </div>
+    </div>
+
+    
+   <div class="profile">
+    <img class="myphoto" src="./asset/Portfolio.jpeg" alt="">
+   </div>
+
+  <a href="#about" class="scroll-hint" aria-label="Scroll down">
+    <span>Scroll</span>
+    <div class="scroll-hint-line"></div>
+  </a>
+</section>
+
+<!-- ============ ABOUT SECTION ============ -->
+<section class="section" id="about">
+  <div class="container">
+    <p class="section-eyebrow reveal-up">About</p>
+    <h2 class="section-title reveal-up"></h2>
+
+    <div class="about-grid">
+      <div class="about-card glass reveal-up tilt-el">
+        <p class="about-bio">
+          I'm currently in my second year of a Bachelor of Computer Applications degree,
+          focused on full-stack web development and Data Structures algorithm (DSA). My coursework in  Web Developement ,C++,Java, Object-Oriented
+          Programming, Php and Python,gives me a strong grounding in how software
+          actually works underneath the frameworks — which shows up in how I structure
+          the products I build.
+        </p>
+        <p class="about-bio">
+          Outside class, I build real projects: interactive interfaces, small full-stack
+          apps, and design systems that I hand-craft rather than template. I'm most
+          interested in the space where clean engineering meets thoughtful design.
+        </p>
+
+        <div class="stats-grid">
+          <div class="stat">
+            <span class="stat-number" data-count="15">0</span><span class="stat-plus">+</span>
+            <span class="stat-label">Projects Built</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number" data-count="6">0</span>
+            <span class="stat-label">Languages &amp; Frameworks</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number" data-count="2">0</span>
+            <span class="stat-label">Years of BCA Study</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number" data-count="100">0</span><span class="stat-plus">%</span>
+            <span class="stat-label">Hand-Written Code</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline reveal-up">
+        <h3 class="timeline-heading">Education &amp; Path</h3>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content glass">
+            <span class="timeline-date">2025 — Present</span>
+            <h4>Bachelor of Computer Applications</h4>
+            <p>Second year, specializing in full-stack web development.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content glass">
+            <span class="timeline-date">2025</span>
+            <h4>Started Building in Public</h4>
+            <p>Began shipping self-directed projects — from multi-file image galleries to fully animated portfolio sites.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content glass">
+            <span class="timeline-date">Ongoing</span>
+            <h4>Full-Stack Skill Building</h4>
+            <p>Working across React, Node.js, MongoDB and Python alongside core CS fundamentals.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SKILLS SECTION ============ -->
+<section class="section section-alt" id="skills">
+  <div class="container">
+    <p class="section-eyebrow reveal-up">Skills</p>
+    <h2 class="section-title reveal-up"></h2>
+
+    <div class="skills-grid">
+
+      <div class="skill-category glass reveal-up">
+        <h3 class="skill-cat-title">Frontend</h3>
+        <div class="skill-row" data-level="90"><span>HTML5 &amp; CSS3</span><div class="skill-track"><div class="skill-fill"></div></div></div>
+        <div class="skill-row" data-level="85"><span>JavaScript (ES6+)</span><div class="skill-track"><div class="skill-fill"></div></div></div>
+        <div class="skill-row" data-level="80"><span>React</span><div class="skill-track"><div class="skill-fill"></div></div></div>
+      </div>
+
+      <div class="skill-category glass reveal-up">
+        <h3 class="skill-cat-title">Backend</h3>
+        <div class="skill-row" data-level="75"><span>Node.js</span><div class="skill-track"><div class="skill-fill"></div></div></div>
+        <div class="skill-row" data-level="70"><span>REST APIs</span><div class="skill-track"><div class="skill-fill"></div></div></div>
+        <div class="skill-row" data-level="65"><span>Python</span><div class="skill-track"><div class="skill-fill"></div></div></div>
+      </div>
+
+      <div class="skill-category glass reveal-up">
+        <h3 class="skill-cat-title">Programming</h3>
+        <div class="skill-row" data-level="85"><span>C++</span><div class="skill-track"><div class="skill-fill"></div></div></div>
+        <div class="skill-row" data-level="80"><span>OOP Concepts</span><div class="skill-track"><div class="skill-fill"></div></div></div>
+        <div class="skill-row" data-level="80"><span>Data Structures</span><div class="skill-track"><div class="skill-fill"></div></div></div>
+      </div>
+
+      <div class="skill-category glass reveal-up">
+        <h3 class="skill-cat-title">Database</h3>
+        <div class="skill-row" data-level="72"><span>MongoDB</span><div class="skill-track"><div class="skill-fill"></div></div></div>
+        <div class="skill-row" data-level="60"><span>MySQL</span><div class="skill-track"><div class="skill-fill"></div></div></div>
+      </div>
+
+      <div class="skill-category glass reveal-up">
+        <h3 class="skill-cat-title">Tools</h3>
+        <div class="skill-row" data-level="82"><span>Git &amp; GitHub</span><div class="skill-track"><div class="skill-fill"></div></div></div>
+        <div class="skill-row" data-level="70"><span>VS Code</span><div class="skill-track"><div class="skill-fill"></div></div></div>
+      </div>
+
+      <div class="skill-category glass reveal-up">
+        <h3 class="skill-cat-title">Cloud</h3>
+        <div class="skill-row" data-level="55"><span>Vercel / Netlify</span><div class="skill-track"><div class="skill-fill"></div></div></div>
+        <div class="skill-row" data-level="45"><span>Basic AWS</span><div class="skill-track"><div class="skill-fill"></div></div></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROJECTS SECTION ============ -->
+<section class="section" id="projects">
+  <div class="container">
+    <p class="section-eyebrow reveal-up">Projects</p>
+    <h2 class="section-title reveal-up"></h2>
+
+    <div class="project-filters reveal-up">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="frontend">Frontend</button>
+      <button class="filter-btn" data-filter="fullstack">Full Stack</button>
+    </div>
+
+    <div class="projects-grid">
+
+      <div class="project-card glass tilt-el reveal-up" data-category="frontend">
+        <div class="project-image">
+          <div class="project-image-placeholder">Portfolio Site</div>
+        </div>
+        <div class="project-body">
+          <h3>Personal Portfolio Website</h3>
+          <p>A dark-themed, single-page portfolio with glassmorphism cards, scroll-triggered
+          animations, and a hand-built skills &amp; projects showcase — the very site you're looking at.</p>
+          <div class="tech-tags">
+            <span>HTML5</span><span>CSS3</span><span>JavaScript</span>
+          </div>
+          <div class="project-links">
+            <a href="#" class="link-btn">GitHub</a>
+            <a href="#" class="link-btn link-btn-primary">Live Demo</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card glass tilt-el reveal-up" data-category="frontend">
+        <div class="project-image">
+          <div class="project-image-placeholder">Image Gallery</div>
+        </div>
+        <div class="project-body">
+          <h3>Interactive Image Gallery</h3>
+          <p>A multi-file gallery app with a full-screen lightbox, keyboard navigation, and
+          live category filtering — built to feel instant with no framework overhead.</p>
+          <div class="tech-tags">
+            <span>HTML5</span><span>CSS3</span><span>JavaScript</span>
+          </div>
+          <div class="project-links">
+            <a href="#" class="link-btn">GitHub</a>
+            <a href="#" class="link-btn link-btn-primary">Live Demo</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card glass tilt-el reveal-up" data-category="fullstack">
+        <div class="project-image">
+          <div class="project-image-placeholder">Task Manager</div>
+        </div>
+        <div class="project-body">
+          <h3>Full-Stack Task Manager</h3>
+          <p>A CRUD task-tracking app with user auth, a Node.js/Express API and MongoDB
+          storage behind a React interface — my first end-to-end full-stack build.</p>
+          <div class="tech-tags">
+          <span>React</span><span>Node.js</span><span>MongoDB</span>
+          </div>
+          <div class="project-links">
+            <a href="#" class="link-btn">GitHub</a>
+            <a href="#" class="link-btn link-btn-primary">Live Demo</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <p class="project-note reveal-up">* Sample project entries — swap in your own repos, links and screenshots.</p>
+  </div>
+</section>
+
+<!-- ============ SERVICES SECTION ============ -->
+<section class="section section-alt" id="services">
+  <div class="container">
+    <p class="section-eyebrow reveal-up">Services</p>
+    <h2 class="section-title reveal-up"></h2>
+
+    <div class="services-grid">
+      <div class="service-card glass reveal-up">
+        <div class="service-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M4 6h16M4 12h16M4 18h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </div>
+        <h3>Frontend Development</h3>
+        <p>Responsive, accessible interfaces built with clean semantic HTML, modern CSS and vanilla or React-based JavaScript.</p>
+      </div>
+
+      <div class="service-card glass reveal-up">
+        <div class="service-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M4 4h16v6H4V4zm0 10h16v6H4v-6z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>Backend Development</h3>
+        <p>Node.js and Express APIs with MongoDB or SQL data layers, designed around clear, predictable data models.</p>
+      </div>
+
+      <div class="service-card glass reveal-up">
+        <div class="service-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M12 2l9 4.9V17L12 22l-9-5.1V6.9L12 2z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>Full-Stack Builds</h3>
+        <p>End-to-end products — from database schema to deployed UI — connected, tested and ready to ship.</p>
+      </div>
+
+      <div class="service-card glass reveal-up">
+        <div class="service-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/><path d="M12 7v5l3 3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </div>
+        <h3>UI Design</h3>
+        <p>Interface design grounded in real design systems: typography scales, spacing rhythm and considered motion.</p>
+      </div>
+
+      <div class="service-card glass reveal-up">
+        <div class="service-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M9 3H5a2 2 0 00-2 2v4m0 6v4a2 2 0 002 2h4m6 0h4a2 2 0 002-2v-4m0-6V5a2 2 0 00-2-2h-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </div>
+        <h3>Problem Solving</h3>
+        <p>A Data Structures &amp; C++ foundation means I can reason about performance and edge cases, not just UI.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ACHIEVEMENTS SECTION ============ -->
+<section class="section" id="achievements">
+  <div class="container">
+    <p class="section-eyebrow reveal-up">Journey</p>
+    <h2 class="section-title reveal-up"></h2>
+
+    <div class="achieve-grid">
+      <div class="achieve-card glass reveal-up">
+        <span class="achieve-tag">Academics</span>
+        <h4>Strong Foundation in C++ &amp; DSA</h4>
+        <p>Built deep, exam-tested understanding of arrays, trees, graphs and algorithmic complexity through university coursework.</p>
+      </div>
+      <div class="achieve-card glass reveal-up">
+        <span class="achieve-tag">Project</span>
+        <h4>Shipped Multiple Self-Directed Builds</h4>
+        <p>Designed and built full front-end projects independently, from concept through polished, animated final product.</p>
+      </div>
+      <div class="achieve-card glass reveal-up">
+        <span class="achieve-tag">Learning</span>
+        <h4>Full-Stack Skill Expansion</h4>
+        <p>Actively growing across React, Node.js, MongoDB and Python to round out a complete product-building skill set.</p>
+      </div>
+      <div class="achieve-card glass reveal-up">
+        <span class="achieve-tag">Next</span>
+        <h4>Open to Internships</h4>
+        <p>Looking for a hands-on internship or collaborative project to apply these skills on a real team.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIALS ============ -->
+<section class="section section-alt" id="testimonials">
+  <div class="container">
+    <p class="section-eyebrow reveal-up">Feedback</p>
+    <h2 class="section-title reveal-up"></h2>
+
+    <div class="testimonial-slider reveal-up">
+      <div class="testimonial-track" id="testimonialTrack">
+        <div class="testimonial-card glass">
+          <p>"Satish picks up new tools fast and actually reads the documentation before asking questions — rare for a second-year student."</p>
+          <div class="testimonial-author"><strong>Course Mentor</strong><span>BCA Faculty</span></div>
+        </div>
+        <div class="testimonial-card glass">
+          <p>"The portfolio he built for himself looks like agency work, not a student project."</p>
+          <div class="testimonial-author"><strong>Peer Reviewer</strong><span>Fellow Developer</span></div>
+        </div>
+        <div class="testimonial-card glass">
+          <p>"Clear communicator, clean code, and genuinely curious about how things work under the hood."</p>
+          <div class="testimonial-author"><strong>Project Collaborator</strong><span>Hackathon Teammate</span></div>
+        </div>
+      </div>
+      <div class="testimonial-dots" id="testimonialDots"></div>
+    </div>
+    <p class="project-note reveal-up">* Placeholder quotes — replace with real references once available.</p>
+  </div>
+</section>
+
+<!-- ============ CONTACT SECTION ============ -->
+<section class="section" id="contact">
+  <div class="container">
+    <p class="section-eyebrow reveal-up">Contact</p>
+    <!-- <h2 class="section-title reveal-up">Let's build something together</h2> -->
+
+    <div class="contact-grid">
+      <form class="contact-form glass reveal-up" id="contactForm" novalidate>
+        <div class="form-row">
+          <div class="input-group">
+            <input type="text" id="nameInput" name="name" required placeholder=" ">
+            <label for="nameInput">Your Name</label>
+            <span class="input-error" data-for="nameInput">Please enter your name</span>
+          </div>
+          <div class="input-group">
+            <input type="email" id="emailInput" name="email" required placeholder=" ">
+            <label for="emailInput">Your Email</label>
+            <span class="input-error" data-for="emailInput">Please enter a valid email</span>
+          </div>
+        </div>
+        <div class="input-group">
+          <input type="text" id="subjectInput" name="subject" required placeholder=" ">
+          <label for="subjectInput">Subject</label>
+          <span class="input-error" data-for="subjectInput">Please enter a subject</span>
+        </div>
+        <div class="input-group">
+          <textarea id="messageInput" name="message" rows="5" required placeholder=" "></textarea>
+          <label for="messageInput">Message</label>
+          <span class="input-error" data-for="messageInput">Please enter your message</span>
+        </div>
+        <button type="submit" class="btn btn-primary btn-full magnetic">
+          <span id="submitLabel">Send Message</span>
+        </button>
+        <p class="form-success" id="formSuccess">Thanks — your message would be sent from a connected backend.</p>
+      </form>
+
+      <div class="contact-side reveal-up">
+        <div class="contact-info-card glass">
+          <h4>Contact Details</h4>
+          <a href="mailto:satishchandyadav584@gmail.com" class="contact-line">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M3 5h18v14H3V5zm0 0l9 7 9-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            satishchandyadav584@gmail.com
+          </a>
+          <a href="#" class="contact-line">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M17 2H7a2 2 0 00-2 2v16a2 2 0 002 2h10a2 2 0 002-2V4a2 2 0 00-2-2zM12 18h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            +91 7897276166
+          </a>
+          <div class="contact-line">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 22s7-6.2 7-12a7 7 0 10-14 0c0 5.8 7 12 7 12z" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="10" r="2.5" stroke="currentColor" stroke-width="2"/></svg>
+            Sagar, Madhya Pradesh, India
+          </div>
+        </div>
+
+        <div class="map-placeholder glass">
+          <span>Map placeholder — embed Google Maps here</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="container footer-grid">
+    <div>
+      <a href="#home" class="logo">SC<span class="accent-text">Y</span></a>
+      <p class="footer-tagline">Building full-stack products, one clean commit at a time.</p>
+    </div>
+
+    <div class="footer-social">
+      <a href="#" class="social-icon" aria-label="GitHub"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.66.5 12.03c0 5.1 3.29 9.42 7.86 10.95.57.1.78-.25.78-.55v-2.1c-3.2.7-3.88-1.4-3.88-1.4-.52-1.34-1.28-1.7-1.28-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.2 1.77 1.2 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.56-.29-5.25-1.28-5.25-5.72 0-1.26.45-2.29 1.2-3.1-.12-.29-.52-1.47.11-3.06 0 0 .97-.31 3.2 1.18a11.1 11.1 0 0 1 5.82 0c2.22-1.5 3.19-1.18 3.19-1.18.63 1.59.23 2.77.11 3.06.75.81 1.2 1.84 1.2 3.1 0 4.45-2.7 5.42-5.27 5.71.42.36.78 1.08.78 2.17v3.22c0 .3.21.66.79.55A10.53 10.53 0 0 0 23.5 12.02C23.5 5.66 18.35.5 12 .5z"/></svg></a>
+      <a href="#" class="social-icon" aria-label="LinkedIn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.86 6 2.48 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.24 8.25h4.5V23H.24V8.25zM8.5 8.25h4.31v2.02h.06c.6-1.14 2.07-2.34 4.26-2.34 4.55 0 5.39 3 5.39 6.9V23h-4.5v-6.85c0-1.63-.03-3.73-2.27-3.73-2.28 0-2.63 1.78-2.63 3.62V23H8.5V8.25z"/></svg></a>
+      <a href="mailto:hello@example.com" class="social-icon" aria-label="Email"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M3 5h18v14H3V5zm0 0l9 7 9-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    </div>
+
+    <p class="footer-copy">© <span id="year"></span> Satish Chandra Yadav. All rights reserved.</p>
+  </div>
+
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 19V5m0 0l-6 6m6-6l6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
